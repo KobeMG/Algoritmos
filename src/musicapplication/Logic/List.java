@@ -21,18 +21,14 @@ public class List {
     }
 
     public boolean isEmpty() {
-//        if (first == null && last == null) {
-//            return true;
-//        } else {
-//            return false;
-//        }
+
         return first == null  && last==null ;
     }
 
     public void insert(String name, String address) {
  //Punteros previus y next Nodos last,firts
         Node newNode = new Node(name, address);
-        if (first == null) { //isEmpty()
+        if (first == null) { 
             first = newNode;
             first.next = first;
             newNode.previous = last;
